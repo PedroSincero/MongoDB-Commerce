@@ -1,4 +1,3 @@
-use("commerce");
 db.produtos.updateMany({
   nome: {
     $ne: "McChicken",
@@ -9,7 +8,6 @@ db.produtos.updateMany({
   },
 });
 
-use("commerce");
 db.produtos.find({}, {
   nome: true,
   _id: false,

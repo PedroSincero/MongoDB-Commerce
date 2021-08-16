@@ -4,20 +4,18 @@ db.produtos.updateMany({}, {
   },
 });
 
-db.produtos.updateOne({
-  tags: {
-    $all: ["bovino"],
-  },
+db.produtos.updateMany({
+  tags: 
+    "bovino"
+  ,
 }, {
   $inc: {
     avaliacao: 5,
   },
 });
 
-db.produtos.updateOne({
-  tags: {
-    $all: ["ave"],
-  },
+db.produtos.updateMany({
+  tags: "ave",
 }, {
   $inc: {
     avaliacao: 3,
