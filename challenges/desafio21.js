@@ -1,7 +1,8 @@
 db.produtos.find({
   $expr: {
-    nome: {
-      $gt: ["$curtidas", "$vendidos"],
-    },
+    $gt: ["$curtidas", "$vendidos"],
   },
+}, {
+  nome: true,
+  _id: false,
 });
